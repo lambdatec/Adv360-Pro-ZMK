@@ -76,3 +76,6 @@ CONFIG_ZMK_HID_INDICATORS=y
 CONFIG_ZMK_BEHAVIOR_LOCAL_ID_TYPE_CRC16=y
 
 CONFIG_ZMK_POINTING=y
+
+# Never enter deep sleep: deep sleep drops the Bluetooth link and loses the first keystrokes on wake
+CONFIG_ZMK_SLEEP=n
