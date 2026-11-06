@@ -12,6 +12,9 @@
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
         diode-direction = "col2row";
+        // Longer release debounce: a worn or bouncy switch otherwise registers one press twice
+        debounce-press-ms = <5>;
+        debounce-release-ms = <25>;
         row-gpios
             = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
